@@ -1,5 +1,5 @@
-import React from "react"
+// import React from "react"
 
-const Apropos = () => {}
+const About = () => {}
 
-export default Apropos
+export default About

@@ -579,3 +579,5 @@ const data = [
     tags: ["Louvre", "Marais", "Rivoli"],
   },
 ]
+
+export default data
