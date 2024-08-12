@@ -4,6 +4,7 @@
 // Couleurs
 $primary: #FF6060; 
 $secondary: black;
+$tertiary: #F7F7F7;
 $color0: white;
 $color1: rgba(255, 255, 255, 0);
 $color2: rgba(10, 10, 10, 0);
@@ -107,6 +108,7 @@ li {
     gap: 50px;
     width: 100%;
     height: 200px;
+    margin-top: 50px;
     background-color: $secondary;
 
     p {
@@ -133,7 +135,7 @@ li {
 .error {
     max-width: 95%;
     margin: 0 auto;
-    padding-bottom: 145px;
+    padding-bottom: 90px;
     padding-top: 90px;
     color: $primary;
     @include flex(column, center, center);
@@ -214,4 +216,55 @@ li {
         height: 0;
     }
 
+}
+
+// Composant Gallery
+.gallery {
+    @include flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    background-color: $tertiary;
+    padding: 50px;
+    border-radius: 25px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+// Composant Card
+.gallery_card {
+    position: relative;
+    width: 30%;
+    height: 340px;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @extend %shadow;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    h2 {
+        z-index: 20;
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        font-weight: 500;
+        font-size: 18px;
+        color: $color0;
+    }
 }

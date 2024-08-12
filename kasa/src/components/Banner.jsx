@@ -1,6 +1,6 @@
 import "../styles/styles.scss"
 
-function Banner({ image, showTitle, title }) {
+function Banner({ image, showTitle }) {
   return (
     <div
       className="banner-container"
