@@ -5,7 +5,7 @@ import About from "./pages/About"
 import File from "./pages/File"
 import Error from "./pages/Error"
 
-const App = () => {
+const Router = () => {
   return (
     <BrowserRouter>
       <div>
@@ -21,4 +21,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Router
