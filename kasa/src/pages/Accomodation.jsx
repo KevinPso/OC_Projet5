@@ -25,7 +25,7 @@ const Accomodation = () => {
         if (data.filter((appart) => appart.id === id)[0] === undefined) {
             setError(true)
         }
-    }, [])
+    }, [id])
 
     if (!load) { return <div>Loading</div> }
     if (error) { return <Error /> }

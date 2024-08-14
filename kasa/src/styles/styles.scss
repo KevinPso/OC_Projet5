@@ -58,7 +58,7 @@ li {
 
 // Nav
 .nav-container {
-    display: flex;
+    @include flex;
     justify-content: flex-end;
     color: $color0;
     font-size: 24px;
@@ -68,11 +68,10 @@ li {
 }
 
 .nav {
-    display: flex;
+    @include flex;
 
     ul {
-        display: flex;
-        align-items: center;
+        @include flex;
         gap: 50px;
 
         :hover {
@@ -83,12 +82,12 @@ li {
 
 // Banniere
 .banner-container {
-    position: relative;
     @include flex;
     @extend %boxShadow;
-    border-radius: 25px;
+    position: relative;
     background-position: center;
     background-size: cover;
+    border-radius: 25px;
     height: 220px;
     padding: 20px;
     max-width: 95%;
@@ -133,12 +132,12 @@ li {
 
 // Page Error 404
 .error {
+    @include flex(column);
     max-width: 95%;
     margin: 0 auto;
     padding-bottom: 90px;
     padding-top: 90px;
     color: $primary;
-    @include flex(column, center, center);
     min-height: 250px;
 }
 
@@ -273,7 +272,7 @@ li {
 
 // Page File
 .accomodation {
-    display: flex;
+    @include flex;
     margin-left: 30px;
     margin-right: 40px;
 
@@ -308,8 +307,7 @@ li {
         margin: 0 auto;
 
         &_infos {
-            display: flex;
-            flex-direction: column;
+            @include flex(column, $align: flex-start);
             gap: 10px;
             font-weight: 500;
             font-size: 20px;
@@ -317,7 +315,7 @@ li {
         
 
             div {
-                display: flex;
+                @include flex;
                 flex-wrap: wrap;
                 gap: 10px;
                 max-width: 100%;
@@ -325,21 +323,17 @@ li {
         }
 
         &_host {
-            display: flex;
-            flex-direction: column;
+            @include flex(column, space-evenly);
             gap: 5px;
+            height: 150px;
 
             div {
-                display: flex;
-                justify-content: flex-end;
-                align-items: flex-end;
+                @include flex($justify: flex-end, $align: flex-end);
                 gap: 0 10px;
             }
 
             &_name {
                 align-self: center;
-                flex-direction: row;
-                justify-content: flex-end;
                 text-align: end;
                 color: $primary;
             }
@@ -362,8 +356,7 @@ li {
 }
 
 .accomodation_collapse {
-    display: flex;
-    justify-content: space-between;
+    @include flex($justify: flex-end, $align: stretch);
     gap: 70px;
     margin-left: 30px;
     margin-right: 30px;
@@ -374,10 +367,17 @@ li {
     }
 }
 
-// Carousel
+// Composant Carousel
+
+.carousel-container {
+    width: 95%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 .carousel {
+    @include flex($align: stretch);
     position: relative;
-    display: flex;
     width: 100%;
     height: 415px;
     background-position: center;
@@ -387,30 +387,26 @@ li {
         width: 100%;
         border-radius: 25px;
         object-fit: cover;
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
 .active-anim {
-    opacity: 1;
-}
-
-.carousel-container {
-    width: 95%;
-    margin-left: 30px;
-    margin-right: 30px;
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 .btn-container {
+    @include flex($justify: space-between);
     position : absolute;
-    display: flex;
-    justify-content: space-between;
     height: 100%;
     width: 100%;
 }
+
 .btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex;
     background-color: transparent;
     border-color: transparent;
     cursor: pointer;
