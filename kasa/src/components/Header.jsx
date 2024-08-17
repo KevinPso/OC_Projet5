@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="header">
       <h1>
-      <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+      <NavLink to="/">
         <img src={logo} alt="Logo de Kasa" />
       </NavLink>
       </h1>

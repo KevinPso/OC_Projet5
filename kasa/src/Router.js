@@ -5,6 +5,7 @@ import About from "./pages/About"
 import Accomodation from "./pages/Accomodation"
 import Error from "./pages/Error"
 
+// Déclaration des différentes routes de l'application
 const Router = () => {
   return (
     <BrowserRouter>

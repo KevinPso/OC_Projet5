@@ -7,6 +7,7 @@ import Collapse from "../components/Collapse"
 import Footer from "../components/Footer"
 
 const About = () => {
+    // Declaration du tableau pour le composant Collapse
     const [Datas] = useState(
         [
             {

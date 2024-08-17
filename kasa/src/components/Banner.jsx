@@ -1,5 +1,6 @@
 import "../styles/styles.scss"
 
+// Composant unique pour les deux images de banieres
 function Banner({ image, showTitle }) {
   return (
     <div

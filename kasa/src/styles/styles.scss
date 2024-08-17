@@ -20,7 +20,6 @@ $color4: rgba(0, 0, 0, 0.5);
 }
 
 
-
 // Generalites
 *,
 ::before,
@@ -40,7 +39,6 @@ a {
 li {
     list-style: none;
 }
-
 
 // Header
 .header {
@@ -84,6 +82,10 @@ li {
             font-size: medium;
             gap: 25px;
         }
+    }
+
+    .nav-active {
+        text-decoration: underline;
     }
 }
 
@@ -134,7 +136,6 @@ li {
         font-size: 24px;
     }
 }
-
 
 // Footer
 .footer {
@@ -362,7 +363,6 @@ li {
     }
 }
 
-
 // Page Accomodation
 .accomodation {
     @include flex;
@@ -510,7 +510,6 @@ li {
 }
 
 // Composant Carousel
-
 .carousel-container {
     @include flex;
     width: 95%;
